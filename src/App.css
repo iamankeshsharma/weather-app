@@ -1,1 +1,16 @@
- 
+:root {
+  --primary-color: 255, 255, 255;
+  --black-color: 0, 0, 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow: hidden; /* Temprary fix for vertical scroll when height set to 100vh. */
+}

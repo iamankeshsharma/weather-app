@@ -1,8 +1,17 @@
-import { useEffect, useState } from "react";
+import Background from "./components/Background";
 import "./App.css";
 
 function App() {
-  return <>Hello</>
+  return (
+    <>
+      <Background
+        img={{
+          src: "./assets/bg1.png",
+          alt: "",
+        }}
+      />
+    </>
+  );
 }
 
 export default App;
