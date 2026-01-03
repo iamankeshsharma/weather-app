@@ -1,5 +1,6 @@
 import React, { createContext, useContext } from "react";
 import { WeatherContext } from "./weather.provider";
+import axios from "axios";
 
 export const ImageContext = createContext();
 
@@ -9,7 +10,7 @@ export const ImageDictionary = (props) => {
   }
 
   const weather = useContext(WeatherContext);
-  console.log(weather);
+  
 
   return (
     <ImageContext.Provider value={{ alt: "hello", src: "./assets/bg1.png" }}>

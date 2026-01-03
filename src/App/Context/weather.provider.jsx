@@ -9,7 +9,7 @@ export const Weather = (props) => {
   }
 
   return (
-    <WeatherContext.Provider value={{}}>
+    <WeatherContext.Provider value={{description:"rain on japan road to mt. fuji"}}>
       {props.children}
     </WeatherContext.Provider>
   );
