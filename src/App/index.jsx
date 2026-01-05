@@ -1,17 +1,16 @@
 import Background from "./components/Background";
 import "./index.css";
 
-import { Weather } from "./Context/weather.provider";
-import { ImageDictionary } from "./Context/imageDictonary.provider";
+import { WeatherProvider, ImageProvider } from "./Context";
 
 function App() {
   return (
     <main>
-      <Weather>
-        <ImageDictionary>
+      <WeatherProvider>
+        <ImageProvider>
           <Background />
-        </ImageDictionary>
-      </Weather>
+        </ImageProvider>
+      </WeatherProvider>
     </main>
   );
 }

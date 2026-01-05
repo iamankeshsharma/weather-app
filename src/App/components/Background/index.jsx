@@ -1,12 +1,12 @@
 import "./index.css";
-import {useState, useContext } from "react";
-import { ImageContext } from "../../Context/imageDictonary.provider";
+import {useState } from "react";
+import { useImage } from "../../Context";
 
 const Background = (props) => {
   const [imgData, setImgData] = useState(props);
 
   if(imgData.src === null || imgData.src === undefined){
-    const image = useContext(ImageContext);
+    const image = useImage();
     setImgData(
       {
         src:image.src,

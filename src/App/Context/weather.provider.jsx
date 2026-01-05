@@ -1,16 +1,24 @@
-import React, { createContext } from "react";
+import { createContext, useContext } from "react";
+import axios from "axios";
 
-export const WeatherContext = createContext();
+const WeatherContext = createContext(null);
 
-export const Weather = (props) => {
-  
-  if(WeatherContext === undefined){
-    throw new Error("please check");
-  }
-
+export const WeatherProvider = (props) => {
   return (
-    <WeatherContext.Provider value={{description:"rain on japan road to mt. fuji"}}>
+    <WeatherContext.Provider
+      value={{ description: "rain on japan road to mt. fuji" }}
+    >
       {props.children}
     </WeatherContext.Provider>
   );
-};
+}
+
+export const useWeather = () => {
+  const weather = useContext(WeatherContext);
+
+  if (weather === null) {
+    throw new Error("useWeather must be used within AuthProvider");
+  }
+
+  return weather;
+}
