@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { useWeather } from "./weather.provider";
+import { useWeather } from "@/App/Context/weather.provider";
 
 const ImageContext = createContext(null);
 

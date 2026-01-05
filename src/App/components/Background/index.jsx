@@ -1,6 +1,6 @@
 import "./index.css";
 import {useState } from "react";
-import { useImage } from "../../Context";
+import { useImage } from "@/App/Context";
 
 const Background = (props) => {
   const [imgData, setImgData] = useState(props);

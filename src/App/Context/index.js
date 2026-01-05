@@ -1,2 +1,2 @@
-export { useWeather, WeatherProvider } from "./weather.provider";
-export { useImage, ImageProvider } from "./image.provider";
+export { useWeather, WeatherProvider } from "@/App/Context/weather.provider";
+export { useImage, ImageProvider } from "@/App/Context/image.provider";

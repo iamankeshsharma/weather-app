@@ -1,5 +1,5 @@
-import Background from "./components/Background";
-import "./index.css";
+import Background from "@/App/components/Background";
+import "@/App/index.css";
 
 import { WeatherProvider, ImageProvider } from "./Context";
 
