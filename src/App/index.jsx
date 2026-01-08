@@ -5,13 +5,25 @@ import { WeatherProvider, ImageProvider } from "./Context";
 
 function App() {
   return (
-    <main>
-      <WeatherProvider>
-        <ImageProvider>
+    <WeatherProvider>
+      <ImageProvider>
+        <main>
           <Background />
-        </ImageProvider>
-      </WeatherProvider>
-    </main>
+
+          <div className="weather-container">
+            <div className="current-n-glimpse">
+              <div></div>
+              <div className="greeting-container">
+                <div className="card"></div>
+                <div className="greeting"></div>
+                <div className="hero"></div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </main>
+      </ImageProvider>
+    </WeatherProvider>
   );
 }
 

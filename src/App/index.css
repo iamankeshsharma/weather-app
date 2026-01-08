@@ -1,1 +1,26 @@
 @import "@/index.css";
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+.weather-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 4%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.weather-container .current-n-glimpse {
+  display: grid;
+  grid-template-rows: min-content max-content;
+}
+
+.weather-container .current-n-glimpse .greeting-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
