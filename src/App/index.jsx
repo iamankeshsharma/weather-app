@@ -10,16 +10,18 @@ function App() {
         <main>
           <Background />
 
-          <div className="weather-container">
-            <div className="current-n-glimpse">
-              <div></div>
-              <div className="greeting-container">
-                <div className="card"></div>
-                <div className="greeting"></div>
-                <div className="hero"></div>
+          <div className="weather">
+            <div className="weather-container">
+              <div className="current-n-glimpse">
+                <div className="search-container"></div>
+                <div className="greeting-container">
+                  <div className="card greeting"></div>
+                  <div className="card hero"></div>
+                  <div className="card favorite"></div>
+                </div>
               </div>
+              <div className="history"></div>
             </div>
-            <div></div>
           </div>
         </main>
       </ImageProvider>

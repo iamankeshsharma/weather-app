@@ -13,13 +13,10 @@
   width: auto;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden; /* Temprary fix for vertical scroll when height set to 100vh. */
-}
-
-#root {
-  width: 100%;
-  height: 100%;
+.card {
+  background-color: red;
+  width: 33vh;
+  height: 35vh;
+  padding: 13px 7px;
+  border-radius: 9%;
 }
