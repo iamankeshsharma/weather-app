@@ -61,7 +61,34 @@ main .weather {
 .weather .weather-container .current-n-glimpse .greeting-container .hero {
   width: 48%;
   height: 100%;
-  border-radius: 4.5%;
+}
+
+.weather
+  .weather-container
+  .current-n-glimpse
+  .greeting-container
+  .hero
+  .temprature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.weather
+  .weather-container
+  .current-n-glimpse
+  .greeting-container
+  .hero
+  .stats
+  .temp-stat {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .weather .weather-container .current-n-glimpse .greeting-container .favorite {
