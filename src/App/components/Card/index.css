@@ -1,0 +1,28 @@
+.card {
+  opacity: 50%;
+  width: 33vh;
+  height: 35vh;
+  padding: 27px;
+  border-radius: 1.6em;
+  color: white;
+  background-image: radial-gradient(#00000000, #00000030);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card .title,
+.body,
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: fit-content;
+}
+
+.card .footer {
+  flex-direction: row;
+}
