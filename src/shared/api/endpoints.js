@@ -3,10 +3,7 @@ import { imageEnv, weatherEnv } from "@/shared/config";
 
 export class Weather extends HttpClient {
   constructor() {
-    if (!weatherEnv.BASE_URL) {
-      throw new Error(`weather Base Url invalid ${weatherEnv.BASE_URL}`);
-    }
-    super(weatherEnv?.BASE_URL, weatherEnv.timeout);
+    super(weatherEnv.BASE_URL, weatherEnv.timeout);
   }
 
   fetch(latitude, longitude) {
@@ -30,9 +27,6 @@ export class Weather extends HttpClient {
 
 export class Image extends HttpClient {
   constructor() {
-    if (!imageEnv.BASE_URL) {
-      throw new Error(`image Base Url invalid ${imageEnv.BASE_URL}`);
-    }
     super(imageEnv.BASE_URL, weatherEnv.timeout);
   }
 
