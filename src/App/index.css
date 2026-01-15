@@ -63,6 +63,33 @@ main .weather {
   height: 100%;
 }
 
+.weather .weather-container .current-n-glimpse .greeting-container .hero .head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.weather
+  .weather-container
+  .current-n-glimpse
+  .greeting-container
+  .hero
+  .head
+  .main-title {
+  font-size: 24px;
+}
+
+.weather
+  .weather-container
+  .current-n-glimpse
+  .greeting-container
+  .hero
+  .head
+  .sub-title {
+  font-size: 20px;
+}
+
 .weather
   .weather-container
   .current-n-glimpse
@@ -81,14 +108,47 @@ main .weather {
   .current-n-glimpse
   .greeting-container
   .hero
+  .temprature
+  .value {
+  font-size: 105px;
+}
+
+.weather
+  .weather-container
+  .current-n-glimpse
+  .greeting-container
+  .hero
+  .temprature
+  .description {
+  font-size: 25px;
+}
+
+.weather
+  .weather-container
+  .current-n-glimpse
+  .greeting-container
+  .hero
   .stats
   .temp-stat {
-  width: max-content;
-  height: max-content;
+  width: 100px;
+  height: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
+}
+
+.weather
+  .weather-container
+  .current-n-glimpse
+  .greeting-container
+  .hero
+  .stats
+  .temp-stat
+  p {
+  font-weight: 600;
+  font-size: 15px;
 }
 
 .weather .weather-container .current-n-glimpse .greeting-container .favorite {
