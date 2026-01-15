@@ -15,6 +15,7 @@ export class Weather extends HttpClient {
         lat: latitude,
         lon: longitude,
         appid: weatherEnv.SECRET_KEY,
+        units: "metric",
       },
     })
       .then((result) => {
