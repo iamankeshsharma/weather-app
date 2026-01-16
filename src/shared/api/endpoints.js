@@ -3,7 +3,7 @@ import { imageEnv, weatherEnv } from "@/shared/config";
 
 export class Weather extends HttpClient {
   constructor() {
-    console.log(import.meta.env.VITE_OPEN_WEATHER_BASE_URL);
+    console.log(import.meta.env);
     if (!weatherEnv.BASE_URL) {
       throw new Error(`weather Base Url invalid ${weatherEnv.BASE_URL}`);
     }
