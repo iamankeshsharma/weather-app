@@ -3,13 +3,13 @@ import Background from "@/App/components/Background";
 import "@/App/index.css";
 
 import { Card } from "@/App/components/Card";
-import { WeatherProvider, ImageProvider } from "@/App/context";
 import FavoriteLocation from "./components/FavoriteLocation";
 import CurrentWeather from "./components/CurrentWeather";
-import useStorage from "./hooks/storage";
+import useStorage from "./hooks/storage.jsx";
+import { WeatherProvider, ImageProvider } from "@/App/context/index.js";
 
 function App() {
-  const [favorite, setFavorite] = useStorage("favoriteLocation");
+  const [_, setFavorite] = useStorage("favoriteLocation");
 
   useEffect(() => {
     setFavorite({
