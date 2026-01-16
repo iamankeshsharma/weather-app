@@ -1,11 +1,26 @@
+import { useEffect } from "react";
 import Background from "@/App/components/Background";
 import "@/App/index.css";
 
-import { WeatherProvider, ImageProvider } from "./Context";
+import { Card } from "@/App/components/Card";
+import { WeatherProvider, ImageProvider } from "./context";
+import FavoriteLocation from "./components/FavoriteLocation";
 import CurrentWeather from "./components/CurrentWeather";
-import {Card} from "@/App/components/Card";
+import useStorage from "./hooks/storage";
 
 function App() {
+  const [favorite, setFavorite] = useStorage("favoriteLocation");
+
+  useEffect(() => {
+    setFavorite({
+        name: "Gurugram",
+        lat: 28.4646148,
+        lon: 77.0299194,
+        country: "IN",
+        state: "Haryana",
+      });
+  }, []);
+
   return (
     <WeatherProvider>
       <ImageProvider>
@@ -19,9 +34,10 @@ function App() {
                 <div className="greeting-container">
                   <Card className="greeting"></Card>
                   <CurrentWeather />
-                  <Card className="favorite"></Card>
+                  <FavoriteLocation />
                 </div>
               </div>
+
               <div className="history"></div>
             </div>
           </div>

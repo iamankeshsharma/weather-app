@@ -1,25 +1,9 @@
 import { Card, Title, Body, Footer } from "@/App/components/Card";
-import { useWeather } from "../../Context";
+import { useWeather } from "@/App/context";
 import { useEffect, useState } from "react";
-
-const toTitleCase = (x) => {
-  // Function to convert a string into Title Case.
-  if (x) {
-    x = x.toLowerCase();
-    x = x.split(" ");
-    x = x.map((i) => {
-      i = i.split("");
-      i = i.map((j, index) => {
-        if (index === 0) {
-          return j.toUpperCase();
-        }
-        return j;
-      });
-      return i.join("");
-    });
-    return x.join(" ");
-  }
-};
+import WeatherStats from "../WeatherStats";
+import {useTitleCase} from "@/App/hooks/utility";
+import "./index.css";
 
 // Function to get Locale time string from provided datetime value.
 const getLocaleTimeString = (dt) => new Date(Date(dt)).toLocaleTimeString(undefined, {hour:"2-digit", minute:"2-digit"});
@@ -44,27 +28,12 @@ const CurrentWeather = (props) => {
       <Body className="temprature">
         <span className="value">{Math.floor(weather?.main?.temp) ?? ''}&deg;C</span>
         <span className="description">
-          {toTitleCase(weather?.weather[0]?.description)}
+          {useTitleCase(weather?.weather[0]?.description)}
         </span>
       </Body>
 
       <Footer className="stats">
-        <div className="temp-stat">
-          <p className="property">Humidity</p>
-          <p className="value">{weather?.main?.humidity}</p>
-        </div>
-        <div className="temp-stat">
-          <p className="property">Wind Speed</p>
-          <p className="value">{weather?.wind?.speed} m/s</p>
-        </div>
-        <div className="temp-stat">
-          <p className="property">Visibility</p>
-          <p className="value">{weather?.visibility}</p>
-        </div>
-        <div className="temp-stat">
-          <p className="property">Pressure</p>
-          <p className="value">{weather?.main?.pressure} N/m <sup>2</sup></p>
-        </div>
+       <WeatherStats {...weather}/>
       </Footer>
     </Card>
   );
