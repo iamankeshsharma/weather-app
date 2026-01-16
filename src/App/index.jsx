@@ -3,7 +3,7 @@ import Background from "@/App/components/Background";
 import "@/App/index.css";
 
 import { Card } from "@/App/components/Card";
-import { WeatherProvider, ImageProvider } from "./context";
+import { WeatherProvider, ImageProvider } from "@/App/context";
 import FavoriteLocation from "./components/FavoriteLocation";
 import CurrentWeather from "./components/CurrentWeather";
 import useStorage from "./hooks/storage";
