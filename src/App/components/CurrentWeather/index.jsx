@@ -26,7 +26,7 @@ const CurrentWeather = (props) => {
       </Title>
 
       <Body className="temprature">
-        <span className="value">{Math.floor(weather?.main?.temp) ?? ''}&deg;C</span>
+        <span className="value">{Math.floor(weather?.main?.temp ?? 0)}&deg;C</span>
         <span className="description">
           {useTitleCase(weather?.weather[0]?.description)}
         </span>

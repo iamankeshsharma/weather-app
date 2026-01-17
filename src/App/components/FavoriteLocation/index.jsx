@@ -7,7 +7,7 @@ import { useTitleCase } from "@/App/hooks/utility";
 import "./index.css";
 import useStorage from "@/App/hooks/storage";
 
-const FavoriteLocation = ({favorite, ...props}) => {
+const FavoriteLocation = ({ favorite, ...props }) => {
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
@@ -21,14 +21,16 @@ const FavoriteLocation = ({favorite, ...props}) => {
   return (
     <Card className={`favorite ${props?.className}`}>
       <Title className="head">
-        <p>
-          {favorite?.name}, {favorite?.state} ({favorite?.country})
-        </p>
+        {favorite?.name ? (
+          <p>
+            {favorite?.name}, {favorite?.state} ({favorite?.country})
+          </p>
+        ) : null}
         <p>Today</p>
       </Title>
       <Body className="temprature">
         <div className="measures">
-          <p className="value">{Math.floor(weather?.main?.temp)}&deg; C</p>
+          <p className="value">{Math.floor(weather?.main?.temp ?? 0)}&deg; C</p>
           <p className="description">
             {useTitleCase(weather?.weather[0]?.description)}
           </p>
