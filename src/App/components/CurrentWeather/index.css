@@ -1,0 +1,35 @@
+.hero {
+  width: 48%;
+  height: 100%;
+}
+
+.hero .head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero .head .main-title {
+  font-size: 24px;
+}
+
+.hero .head .sub-title {
+  font-size: 20px;
+}
+
+.hero .temprature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hero .temprature .value {
+  font-size: 105px;
+}
+
+.hero .temprature .description {
+  font-size: 25px;
+}
