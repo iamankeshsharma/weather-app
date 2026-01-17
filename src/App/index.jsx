@@ -1,13 +1,12 @@
-import { useEffect } from "react";
 import "@/App/index.css";
 
 import Background from "@/App/components/Background";
-import { Card } from "@/App/components/Card";
 import FavoriteLocation from "./components/FavoriteLocation";
 import CurrentWeather from "./components/CurrentWeather";
 import LocationSearch from "./components/LocationSearch";
 import useStorage from "./hooks/storage";
 import { WeatherProvider, ImageProvider } from "@/App/Context";
+import Greeting from "./components/Greeting";
 
 function App() {
   const [favorite, setFavorite] = useStorage("favoriteLocation");
@@ -23,7 +22,7 @@ function App() {
               <div className="current-n-glimpse">
                 <LocationSearch favorite={favorite} setFavorite={setFavorite}/>
                 <div className="greeting-container">
-                  <Card className="greeting"></Card>
+                  <Greeting/>
                   <CurrentWeather />
                   <FavoriteLocation favorite={favorite}/>
                 </div>
