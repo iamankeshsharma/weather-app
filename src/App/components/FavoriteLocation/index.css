@@ -1,0 +1,42 @@
+.favorite {
+  width: 24%;
+  height: 100%;
+}
+
+.favorite .head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.favorite .head p {
+  width: 100%;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.favorite .temprature {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.favorite .temprature .measures {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.favorite .temprature .measures .value {
+  font-size: 80px;
+}
+
+.favorite .temprature .measures .description {
+  font-size: 25px;
+}
