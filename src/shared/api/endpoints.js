@@ -7,7 +7,7 @@ export class Weather extends HttpClient {
   }
 
   fetch(latitude, longitude) {
-    return this.get("/data/2.5/weather", {
+    return this.get("/weather", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -16,25 +16,6 @@ export class Weather extends HttpClient {
         lon: longitude,
         appid: weatherEnv.SECRET_KEY,
         units: "metric",
-      },
-    })
-      .then((result) => {
-        if (result?.status === 200) return result;
-      })
-      .catch((err) => console.log(err));
-  }
-}
-
-export class Geolocation extends Weather {
-  fetch(location) {
-    return this.get("/geo/1.0/direct", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      params: {
-        q: location,
-        limit: 10,
-        appid: weatherEnv.SECRET_KEY,
       },
     })
       .then((result) => {
