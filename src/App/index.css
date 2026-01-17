@@ -39,11 +39,6 @@ main .weather {
   align-items: center;
 }
 
-.weather .weather-container .current-n-glimpse .search-container {
-  width: 100%;
-  height: 20%;
-}
-
 .weather .weather-container .current-n-glimpse .greeting-container {
   width: 100%;
   height: 80%;
