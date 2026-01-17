@@ -48,11 +48,6 @@ main .weather {
   align-items: center;
 }
 
-.weather .weather-container .current-n-glimpse .greeting-container .greeting {
-  width: 24%;
-  height: 100%;
-}
-
 .weather .weather-container .history {
   width: 100%;
   height: 50%;
