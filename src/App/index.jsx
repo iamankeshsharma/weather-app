@@ -6,7 +6,7 @@ import { Card } from "@/App/components/Card";
 import FavoriteLocation from "./components/FavoriteLocation";
 import CurrentWeather from "./components/CurrentWeather";
 import useStorage from "./hooks/storage";
-import { WeatherProvider, ImageProvider } from "@/App/context";
+import { WeatherProvider, ImageProvider } from "@/App/Context";
 
 function App() {
   const [_, setFavorite] = useStorage("favoriteLocation");

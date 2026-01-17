@@ -1,5 +1,5 @@
 import { Card, Title, Body, Footer } from "@/App/components/Card";
-import { useWeather } from "@/App/context";
+import { useWeather } from "@/App/Context";
 import { useEffect, useState } from "react";
 import WeatherStats from "../WeatherStats";
 import {useTitleCase} from "@/App/hooks/utility";

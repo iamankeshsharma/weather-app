@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useWeather } from "@/App/context/weather.provider";
+import { useWeather } from "@/App/Context/weather.provider";
 import { fetchImage } from "@/shared/api";
 
 const ImageContext = createContext(null);
