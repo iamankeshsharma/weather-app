@@ -8,10 +8,6 @@ const Greeting = (props) => {
   const weatherData = useWeather();
   const [wish, setWish] = useState("");
 
-  useEffect(()=>{
-    console.log()
-  },[weatherData]);
-
   useEffect(() => {
     const hour = new Date().getHours();
     if (hour >= 4 && hour < 12) {
