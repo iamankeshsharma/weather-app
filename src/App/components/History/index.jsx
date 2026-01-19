@@ -22,7 +22,7 @@ const History = ({ favorite, ...props }) => {
   useEffect(() => {
     forecast(favorite?.lat, favorite?.lon)
       .then((result) => {
-        if (result.status === 200) {
+        if (result?.status === 200) {
           setForecastData(result?.data?.list);
         }
       })
