@@ -29,7 +29,7 @@ function App() {
                 </div>
               </div>
 
-              <History/>
+              <History favorite={favorite}/>
             </div>
           </div>
         </main>

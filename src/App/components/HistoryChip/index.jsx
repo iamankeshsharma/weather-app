@@ -1,25 +1,36 @@
 import WeatherStats from "../WeatherStats";
 import WeatherIcon from "../WeatherIcon";
 import "./index.css";
+import { useEffect, useState } from "react";
 
 const HistoryChip = (props) => {
+  const [date, setDate] = useState(null);
+  const day = ["Sun", "Mon", "Tue", "Thr", "Fri", "Sat"];
+
+  useEffect(()=>{
+    setDate((new Date(props?.dt_txt)));
+  },[props]);
+
   return (
     <div className="history-chip">
       <div className="head">
         <div className="dayTime">
           <div className="time">
-            <span>21:00</span>
+            <span>{date?.getHours()} Hr</span>
           </div>
           <div className="day">
-            <span>28</span>
-            <span>Mon</span>
+            <span>{date?.getDate()}</span>
+            <span>{day[date?.getDay()]}</span>
           </div>
         </div>
         <div className="icon-temp">
-          <WeatherIcon width={70} height={70} />
+          <WeatherIcon 
+          name={props?.weather?.length? props?.weather[0]?.main:"Clear"}
+          icon={props?.weather?.length? props?.weather[0]?.icon:"01n"}
+          width={70} height={70} />
           <div className="temp">
-            <span className="max-temp">28&deg;c</span>
-            <span className="min-temp">27&deg;c</span>
+            <span className="max-temp">{props?.main?.temp_max} &deg;c</span>
+            <span className="min-temp">{props?.main?.temp_min}&deg;c</span>
           </div>
         </div>
       </div>
@@ -28,6 +39,7 @@ const HistoryChip = (props) => {
         className="stat-col"
         divider={true}
         alignItems="align-items-start"
+        weather={props}
       />
     </div>
   );

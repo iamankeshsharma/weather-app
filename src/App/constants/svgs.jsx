@@ -80,8 +80,8 @@ const Clear = (props) => {
           <line x1="12" y1="1" x2="12" y2="3" />
           <line x1="12" y1="21" x2="12" y2="23" />
           <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-          <line x1="19.78" y1="4.22" x2="18.36" y2="5.64"/>
-          <line x1="5.64" y1="18.36" x2="4.22" y2="19.78"/>
+          <line x1="19.78" y1="4.22" x2="18.36" y2="5.64" />
+          <line x1="5.64" y1="18.36" x2="4.22" y2="19.78" />
           <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
           <line x1="1" y1="12" x2="3" y2="12" />
           <line x1="21" y1="12" x2="23" y2="12" />
@@ -171,7 +171,7 @@ const Atmosphere = (props) => {
   );
 };
 
-const weather = {Clouds, Clear, Rain, ThunderStorm, Snow, Atmosphere};
+const weather = { Clouds, Clear, Rain, ThunderStorm, Snow, Atmosphere };
 
 const Search = (props) => {
   return (
@@ -193,5 +193,24 @@ const Search = (props) => {
   );
 };
 
+const ChevronLeft = (props) => {
+  return (
+    <svg
+      width={props?.width ?? `20`}
+      height={props?.height ?? "20"}
+      fill={props?.fill ?? "none"}
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.5 15L12.5 10L7.5 5"
+        stroke={props?.stroke ?? "#DEEBFF"}
+        strokeWidth={props?.strokeWidth ?? "2"}
+        strokeLinecap={props?.strokeLinecap ?? "round"}
+        strokeLinejoin={props?.strokeLinejoin ?? "round"}
+      />
+    </svg>
+  );
+};
 
-export { weather, Search };
+export { weather, Search, ChevronLeft };
