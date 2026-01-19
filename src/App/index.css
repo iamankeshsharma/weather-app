@@ -28,9 +28,11 @@ main .weather {
   justify-content: center;
   width: 100%;
   height: 100%;
+  gap: 8px;
 }
 
 .weather .weather-container .current-n-glimpse {
+  gap: 8px;
   width: 100%;
   height: 50%;
   display: flex;
@@ -40,15 +42,11 @@ main .weather {
 }
 
 .weather .weather-container .current-n-glimpse .greeting-container {
+  gap: 8px;
   width: 100%;
   height: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.weather .weather-container .history {
-  width: 100%;
-  height: 50%;
 }

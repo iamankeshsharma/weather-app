@@ -6,6 +6,24 @@ export class Weather extends HttpClient {
     super(weatherEnv.BASE_URL, weatherEnv.timeout);
   }
 
+  forecast(latitude, longitude) {
+    return this.get("/data/2.5/forecast", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      params: {
+        lat: latitude,
+        lon: longitude,
+        appid: weatherEnv.SECRET_KEY,
+        units: "metric",
+      },
+    })
+      .then((result) => {
+        if (result?.status === 200) return result;
+      })
+      .catch((err) => console.log(err));
+  }
+
   fetch(latitude, longitude) {
     return this.get("/data/2.5/weather", {
       headers: {
