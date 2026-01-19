@@ -5,7 +5,6 @@ import WeatherIcon from "../WeatherIcon";
 import { fetchWeather } from "@/shared/api";
 import { useTitleCase } from "@/App/hooks/utility";
 import "./index.css";
-import useStorage from "@/App/hooks/storage";
 
 const FavoriteLocation = ({ favorite, ...props }) => {
   const [weather, setWeather] = useState(null);

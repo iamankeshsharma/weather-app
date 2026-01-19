@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 import "./index.css";
 import { Card, Body } from "@/App/components/Card";
+import WeatherIcon from "../WeatherIcon";
+import { useWeather } from "@/App/Context";
 
 const Greeting = (props) => {
+  const weatherData = useWeather();
   const [wish, setWish] = useState("");
+
+  useEffect(()=>{
+    console.log()
+  },[weatherData]);
 
   useEffect(() => {
     const hour = new Date().getHours();
@@ -21,7 +28,13 @@ const Greeting = (props) => {
   return (
     <Card className="greeting">
       <Body className="wishing">
-        <h2>Good {wish}</h2>
+        <WeatherIcon
+          name={weatherData?.weather?.length? weatherData?.weather[0]?.main:"Clear"}
+          icon={weatherData?.weather?.length? weatherData?.weather[0]?.icon: "1dn"}
+          width={180}
+          height={180}
+        />
+        <p>Good {wish}</p>
       </Body>
     </Card>
   );

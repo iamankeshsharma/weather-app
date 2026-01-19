@@ -7,6 +7,7 @@ import LocationSearch from "./components/LocationSearch";
 import useStorage from "./hooks/storage";
 import { WeatherProvider, ImageProvider } from "@/App/Context";
 import Greeting from "./components/Greeting";
+import History from "./components/History";
 
 function App() {
   const [favorite, setFavorite] = useStorage("favoriteLocation");
@@ -20,15 +21,15 @@ function App() {
           <div className="weather">
             <div className="weather-container">
               <div className="current-n-glimpse">
-                <LocationSearch favorite={favorite} setFavorite={setFavorite}/>
+                <LocationSearch favorite={favorite} setFavorite={setFavorite} />
                 <div className="greeting-container">
-                  <Greeting/>
+                  <Greeting />
                   <CurrentWeather />
-                  <FavoriteLocation favorite={favorite}/>
+                  <FavoriteLocation favorite={favorite} />
                 </div>
               </div>
 
-              <div className="history"></div>
+              <History/>
             </div>
           </div>
         </main>
